@@ -4,6 +4,7 @@ interface FoodItemProps {
     food: {
         name: string;
         price: number;
+        image: string;
     };
     stock: number;
     onBuy: () => void;
@@ -11,7 +12,8 @@ interface FoodItemProps {
 
 const FoodItem: React.FC<FoodItemProps> = ({ food, stock, onBuy }) => {
     return (
-        <div className="food-item">
+        <div className="food-item colorful-border">
+            <img src={food.image} alt={food.name} className="food-image" />
             <h3>{food.name}</h3>
             <p>Harga: Rp {food.price}</p>
             <p>Stok: {stock}</p>

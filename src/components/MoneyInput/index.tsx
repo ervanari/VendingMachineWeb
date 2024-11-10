@@ -11,7 +11,7 @@ const MoneyInput: React.FC<MoneyInputProps> = ({ onInsertMoney }) => {
         <div className="money-input">
             <h3>Masukkan Uang:</h3>
             {amounts.map((amount) => (
-                <button key={amount} className="money-button" onClick={() => onInsertMoney(amount)}>
+                <button key={amount} className="money-button colorful-button" onClick={() => onInsertMoney(amount)}>
                     Rp {amount}
                 </button>
             ))}
